@@ -50,13 +50,26 @@ true
 
 Q. Is the hierarchy module, collection, package?
 
-7/11 Matthew Butterick morning
-------------------------------
+7/11 Matthew Butterick
+----------------------
 Q. What makes a good language?
+- good ergonomics. Want the right level of verbosity. Don't want to blow up nuclear reactor with a single bit switch. But regex, math want to be compact.
 
 Q. What does "module+" do?
 
 Q. What do readers do? They take arbitrary input and convert them into S-expressions.
 What do expanders do? They make bindings for the S-expressions. They can expand stuff with macros too.
 
-Q.
+Quote: "Racket is the only language that has made me want to be a better person
+
+7/12 Stephen Chang
+------------------
+
+Type systems: "A lightweight syntactic analysis that approximates program behavior"
+ - validate function arguments (prevent bugs)
+ - check memory safety (avoid malware) (as in rust)
+ - verify program properties (prove equivalence)
+ 
+ Matthias says that the Racket book doesnt mention types, but development is entirely "type-driven"
+ 
+ 
