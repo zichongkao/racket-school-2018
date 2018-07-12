@@ -1,0 +1,62 @@
+Racket Summer School
+====================
+7/9 Matthias talk morning
+------------------------
+Q: So (f x) takes the entire "form" and stuffs it into x? Is that why displayln x recovers "(f 17)" rather than just 17? Then how
+
+Q: What is (what sounds like) cutter? when someone suggested it as an alternative (second e)?
+
+Q: Are compile time functions always just define-syntax stuff? Since compilers expect syntax?
+
+Q: Important nouns: pattern variable, syntax, identifier, template. What do they mean?
+
+Q: define vs let?
+
+Q: why does "cons?" check if it's a list?
+
+Q: define, define-syntax, define-for-syntax are they just run earlier and earlier?
+
+7/9 Mattias talk afternoon
+--------------------------
+
+Q: Why use directives. ie #:do stuff
+
+Q: 
+
+7/10 Matthew Flatt afternoon
+----------------------------
+
+Q. What's the difference between a datum-literal and literal?
+
+Q. Syntax-parse vs match vs syntax-case? Is syntax-parse strictly better than the other two?
+ - define-syntax-rule is just for basic rearranging use-cases.
+ - syntax-case is 30 yo and is superceded by syntax-parse
+
+Q. At which stage is out-if's arguments evaluated?
+
+> (define (our-if condition true-expr false-expr)
+    (cond [condition true-expr]
+          [else false-expr]))
+> (define (display-and-return x)
+    (displayln x)
+    x)
+> (our-if #t (display-and-return "true") (display-and-return "false"))
+true
+false
+"true"
+> (cond [#t (display-and-return "true")] [else (display-and-return "false")])
+true
+"true"
+
+Q. Is the hierarchy module, collection, package?
+
+7/11 Matthew Butterick morning
+------------------------------
+Q. What makes a good language?
+
+Q. What does "module+" do?
+
+Q. What do readers do? They take arbitrary input and convert them into S-expressions.
+What do expanders do? They make bindings for the S-expressions. They can expand stuff with macros too.
+
+Q.
